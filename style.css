@@ -44,4 +44,29 @@ body {
 
 .nav {
 	float: right;
+	overflow: hidden;
+}
+
+.nav a {
+	float: left;
+}
+
+.nav a.right {
+	float: right;
+}
+
+.main {
+	border-bottom: 1px solid black;
+}
+
+.footer {
+	overflow: hidden;
+}
+
+.footer p {
+	float: left;
+}
+
+.footer p.right {
+	float: right;
 }
