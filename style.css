@@ -13,7 +13,31 @@ body {
 	background-color: white;
 	border: 1px solid black;
 	left: 16.5%;
+	padding-left: 20px;
+	padding-right: 20px;
 	position: absolute;
 	top: 5%;
 	width: 900px;
 }
+
+.header {
+	overflow: hidden;
+}
+
+.header h1 {
+	float: left;
+}
+
+.header h1.right {
+	float: right;
+}
+
+.datetime_nav {
+	overflow: hidden;
+}
+
+.datetime {
+	float: left;
+}
+
+.datetime {
