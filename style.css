@@ -21,6 +21,7 @@ body {
 }
 
 .header {
+	border-bottom: 1px solid black;
 	overflow: hidden;
 }
 
@@ -33,6 +34,7 @@ body {
 }
 
 .datetime_nav {
+	border-bottom: 1px solid black;
 	overflow: hidden;
 }
 
@@ -40,4 +42,6 @@ body {
 	float: left;
 }
 
-.datetime {
+.nav {
+	float: right;
+}
