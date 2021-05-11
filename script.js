@@ -6,39 +6,39 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 setInterval(function() {
-	var datetime = new Date();
-
-	var year = datetime.getFullYear();
-	var day = datetime.getDate();
-
-	var month = months[datetime.getMonth()];
-	var weekday = weekdays[datetime.getDay()];
-
-	if (datetime.getHours() = 0) {
+	var date = new Date();
+	
+	var year = date.getFullYear();
+	var day = date.getDate();
+	
+	var month = months[date.getMonth()];
+	var weekday = weekdays[date.getDay()];
+	
+	if (date.getHours() == 0) {
 		hour = 12;
 		meridian = "AM";
-	} else if ((datetime.getHours() > 0) || (datetime.getHours() < 12)) {
-		hour = datetime.getHours();
+	} else if ((date.getHours() > 0) && (date.getHours() < 12)) {
+		hour = date.getHours();
 		meridian = "AM";
-	} else if (datetime.getHours() = 12) {
+	} else if (date.getHours() == 12) {
 		hour = 12;
 		meridian = "PM";
-	} else if ((datetime.getHours() > 12) || (datetime.getHours() < 24)) {
-		hour = datetime.getHours() - 12;
+	} else if ((date.getHours() > 12) && (date.getHours() < 24)) {
+		hour = date.getHours() - 12;
 		meridian = "PM";
 	}
-
-	if (datetime.getMinutes() < 10) {
-		minute = "0" + datetime.getMinutes();
+	
+	if (date.getMinutes() < 10) {
+		minute = "0" + date.getMinutes();
 	} else {
-		minute = datetime.getMinutes();
+		minute = date.getMinutes();
 	}
-
-	if (datetime.getSeconds() < 10) {
-		second = "0" + datetime.getSeconds();
+	
+	if (date.getSeconds() < 10) {
+		second = "0" + date.getSeconds();
 	} else {
-		second = datetime.getSeconds();
+		second = date.getSeconds();
 	}
-
-	document.getElementById("datetime").innerHTML = weekday + ", " + month + " " + day + ", " + year + " " + hour + ":" + minute + ":" + second + " " + meridian;
+	
+	document.getElementById("datetime").innerHTML = weekday + ",&nbsp;" + month + "&nbsp;" + day + ",&nbsp;" + year + "&nbsp;&nbsp;" + hour + ":" + minute + ":" + second + "&nbsp;" + meridian;
 }, 1000);
