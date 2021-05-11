@@ -11,6 +11,9 @@ body {
 }
 
 .content {
+	background-color: white;
 	border: 1px solid black;
+	left: 15%;
+	top: 5%;
 	width: 900px;
 }
